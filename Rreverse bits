@@ -1,0 +1,10 @@
+def reverseBits(self, n):
+        ans=0
+        for i in range(32)[::-1]: #from low to high
+            ans=ans
+            mask=1<<i
+            set_mask=1<<(31-i)
+            if (mask&n)!=0: #get bit
+                #set bit to 1
+                ans|=set_mask
+        return ans
